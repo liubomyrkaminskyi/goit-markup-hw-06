@@ -452,7 +452,7 @@
             growth solutions.
           </p>
         </div>
-        <div>
+        <div class="footer-link">
           <p class="footer-social">Social media</p>
           <ul class="footer-social-list list">
             <li class="socials-item">
@@ -509,6 +509,28 @@
             </li>
           </ul>
         </div>
+
+        <form class="subscription-form" name="subscription-form">
+          <strong class="subscription-form-title subtitle">Subscribe</strong>
+          <div class="subscription-form-group" role="group">
+            <label class="subscription-form-label">
+              <input
+                class="subscription-form-input"
+                type="email"
+                name="email"
+                required
+                placeholder="E-mail"
+              />
+            </label>
+
+            <button class="subscription-btn main-btn" type="submit">
+              Subscribe
+              <svg class="subscription-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 
@@ -520,6 +542,59 @@
             <use href="./images/icons.svg#close-icon"></use>
           </svg>
         </button>
+
+        <strong class="modal-title">Leave your contacts and we will call you back</strong>
+        <form class="modal-form form" name="modal_form">
+          <label class="form-label" for="modal_name"
+            ><span class="form-label-title">Name</span></label
+          >
+          <div class="form-wrapper">
+            <input class="form-field" type="text" name="modal_name" id="modal_name" />
+            <svg class="form-icon" width="12" height="12">
+              <use href="./images/icons.svg#name"></use>
+            </svg>
+          </div>
+
+          <label class="form-label" for="modal_phone"
+            ><span class="form-label-title">Phone</span></label
+          >
+          <div class="form-wrapper">
+            <input class="form-field" type="text" name="modal_phone" id="modal_phone" />
+            <svg class="form-icon" width="13" height="13">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </div>
+
+          <label class="form-label" for="modal_email"
+            ><span class="form-label-title">Email</span></label
+          >
+          <div class="form-wrapper">
+            <input class="form-field" type="text" name="modal_email" id="modal_email" />
+            <svg class="form-icon" width="15" height="12">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </div>
+
+          <label class="form-label-comment" for="modal_comment"
+            ><span class="form-label-title">Comment</span>
+            <textarea
+              class="form-comment"
+              name="modal_comment"
+              id="modal_comment"
+              rows="6"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+
+          <label class="form-aggrement">
+            <input class="form-check-input" type="checkbox" />
+            <span class="form-aggrement-text"
+              >I accept the terms and conditions of the <a href="">Privacy Policy</a></span
+            >
+          </label>
+        </form>
+
+        <button class="main-btn" type="submit">Send</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
