@@ -757,18 +757,32 @@ body {
   width: 100%;
   height: 40px;
   outline-color: transparent;
-  outline-offset: -1;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 0;
+  font-size: 12px;
   transition: outline var(--anim-fast);
   padding-left: 38px;
   cursor: pointer;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
 }
 
-.form-field:hover,
+.form-comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border-radius: 4px;
+  padding: 8px 6px 8px 6px;
+  font-size: 12px;
+  outline: transparent;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
 .form-field:focus,
-.form-comment:hover,
 .form-comment:focus {
   outline: 1px solid var(--logo-part-cl);
 }
@@ -795,20 +809,6 @@ body {
   margin-bottom: 4px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-}
-
-.form-comment {
-  display: block;
-  width: 100%;
-  height: 120px;
-  resize: none;
-  border-radius: 4px;
-  padding: 8px 6px 8px 6px;
-  font-size: 12px;
-  outline: transparent;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
 }
 
 .form-comment::placeholder {
@@ -888,4 +888,27 @@ body {
   align-items: center;
   margin-bottom: 24px;
   gap: 8px;
+}
+
+.checkbox-link {
+  color: var(--logo-part-cl);
+}
+
+.icon-checked {
+  opacity: 0;
+  transition: opacity var(--anim-fast);
+}
+
+.icon-unchecked {
+  fill: var(--gray-icon);
+  opacity: 1;
+  transition: opacity var(--anim-fast);
+}
+
+.form-check-input:checked + .register-form-icons .icon-checked {
+  opacity: 1;
+}
+
+.form-check-input:checked + .register-form-icons .icon-unchecked {
+  opacity: 0;
 }
